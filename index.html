@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apropos – støtte</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root { --aubergine: #40263E; --rose: #FE91B8; --bg: #FDF2F2; --text: #1A1A1A; --muted: #5d4a5b; --line: #FFC9C9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  .eyebrow { font: 600 12px/1 -apple-system, "Helvetica Neue", Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--aubergine); }
+  h1 { color: var(--aubergine); font-weight: 400; font-size: 40px; line-height: 1.1; margin: 12px 0 8px; }
+  h2 { color: var(--aubergine); font-weight: 400; font-size: 24px; margin: 36px 0 8px; }
+  p, li { max-width: 62ch; }
+  .updated { color: var(--muted); font: 14px -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+  a { color: var(--aubergine); text-decoration-color: var(--rose); text-underline-offset: 3px; }
+  .head { display:flex; gap:16px; align-items:center; }
+  .head img { width:72px; height:72px; border-radius:16px; }
+  dt { color: var(--aubergine); margin-top: 16px; }
+  dd { margin: 4px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <div class="head">
+    <img src="icon.png" alt="">
+    <div>
+      <div class="eyebrow">Støtte</div>
+      <h1>Apropos</h1>
+    </div>
+  </div>
+  <p>Apropos gjør norsk tale om til tekst rett på iPhonen, med talemodellen NB-ASR fra Nasjonalbiblioteket. Lyden behandles på telefonen og sendes ikke ut, med mindre du selv kobler til en ekstern tjeneste.</p>
+
+  <h2>Kontakt</h2>
+  <p>Spørsmål, feil eller ønsker: <a href="mailto:marius.husnes@gmail.com?subject=Apropos">marius.husnes@gmail.com</a></p>
+
+  <h2>Vanlige spørsmål</h2>
+  <dl>
+    <dt>Hvilke iPhoner fungerer appen på?</dt>
+    <dd>Talemodellen på telefonen trenger minst 8 GB minne, altså iPhone 15 Pro eller nyere. På eldre telefoner kan du bruke et eksternt API under Innstillinger → Modeller.</dd>
+    <dt>Hvorfor er appen så stor?</dt>
+    <dd>Talemodellen (ca. 2,3 GB) ligger i appen, slik at alt kan skje på telefonen uten internett.</dd>
+    <dt>Hvordan får jeg navn og faguttrykk stavet riktig?</dt>
+    <dd>Legg dem inn som nøkkelord i innstillingene før du starter opptaket.</dd>
+    <dt>Hvordan lages oppsummeringen?</dt>
+    <dd>Med Apple Intelligence på telefonen, eller med en tjeneste du velger selv under Innstillinger → Modeller.</dd>
+    <dt>Blir opptakene mine lagret i skyen?</dt>
+    <dd>Nei. Alt lagres bare på telefonen. Les mer i <a href="privacy/">personvernerklæringen</a>.</dd>
+  </dl>
+
+  <hr>
+  <p class="updated"><a href="privacy/">Personvern</a> · Talemodell: NB-ASR fra Nasjonalbiblioteket</p>
+</main>
+</body>
+</html>
