@@ -3,26 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Apropos – personvern</title>
+<link rel="icon" href="../icon.png">
 <style>
-  :root { --aubergine: #40263E; --rose: #FE91B8; --bg: #FDF2F2; --text: #1A1A1A; --muted: #5d4a5b; --line: #FFC9C9; }
+  :root { --accent: #1F4D3A; --bright: #2E9E6B; --bg: #F4F6F1; --surface: #FFFFFF; --text: #1D2A21; --muted: #51604F; --line: #D5DDCF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent: #8FD1AA; --bright: #5FD39A; --bg: #0E1511; --surface: #17211B; --text: #E6ECE6; --muted: #9DAC9F; --line: #2C3A31; }
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 ui-rounded, -apple-system, "SF Pro Rounded", "Helvetica Neue", Arial, sans-serif; }
   main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
-  .eyebrow { font: 600 12px/1 -apple-system, "Helvetica Neue", Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--aubergine); }
-  h1 { color: var(--aubergine); font-weight: 400; font-size: 40px; line-height: 1.1; margin: 12px 0 8px; }
-  h2 { color: var(--aubergine); font-weight: 400; font-size: 24px; margin: 36px 0 8px; }
+  .eyebrow { font-weight: 600; font-size: 14px; color: var(--muted); }
+  h1 { color: var(--accent); font-weight: 700; font-size: 40px; line-height: 1.1; margin: 8px 0; }
+  h2 { color: var(--accent); font-weight: 700; font-size: 22px; margin: 36px 0 8px; }
   p, li { max-width: 62ch; }
-  .updated { color: var(--muted); font: 14px -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  .updated { color: var(--muted); font-size: 14px; }
   hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
-  a { color: var(--aubergine); text-decoration-color: var(--rose); text-underline-offset: 3px; }
+  a { color: var(--accent); text-decoration-color: var(--bright); text-underline-offset: 3px; }
+  .head { display: flex; gap: 16px; align-items: center; }
+  .head img { width: 72px; height: 72px; border-radius: 16px; }
+  dl { margin: 0; }
+  dt { color: var(--accent); font-weight: 600; margin-top: 12px; background: var(--surface); border: 1px solid var(--line); border-bottom: 0; border-radius: 16px 16px 0 0; padding: 14px 16px 0; }
+  dd { margin: 0; background: var(--surface); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 16px 16px; padding: 4px 16px 14px; }
 </style>
 </head>
 <body>
 <main>
-  <div class="eyebrow">Apropos</div>
+  <div class="eyebrow"><a href="../">Apropos</a></div>
   <h1>Personvern</h1>
-  <p class="updated">Sist oppdatert 5. november 2026</p>
+  <p class="updated">Sist oppdatert 24. november 2026</p>
 
   <p><strong>Kort fortalt:</strong> Apropos samler ikke inn opplysninger om deg. Lyd og tekst blir på telefonen din, med mindre du selv velger å koble appen til en ekstern tjeneste.</p>
 
@@ -30,7 +40,10 @@
   <p>Opptak, transkripsjoner, oppsummeringer og innstillinger lagres bare på telefonen din. Du kan slette et opptak når som helst, og alt slettes hvis du sletter appen. Vi har ingen server, og vi får ikke tilgang til noe av dette.</p>
 
   <h2>Talegjenkjenning og oppsummering</h2>
-  <p>Talegjenkjenningen skjer på telefonen med NB-ASR, en talemodell fra Nasjonalbiblioteket. Oppsummeringer lages med Apple Intelligence på telefonen.</p>
+  <p>Talegjenkjenningen skjer på telefonen, med en talemodell som ligger i appen. Oppsummeringer lages med Apple Intelligence på telefonen.</p>
+
+  <h2>Hvem som snakker</h2>
+  <p>Hvis du slår på «Finn ut hvem som snakker», beholdes lyden på telefonen til opptaket er ferdig behandlet, og slettes etterpå. Modellen som gjør dette, lastes ned fra Apple én gang og kjører på telefonen.</p>
 
   <h2>Eksterne tjenester du velger selv</h2>
   <p>Under Innstillinger → Modeller kan du koble appen til en ekstern tjeneste (et OpenAI-kompatibelt API) for transkripsjon eller oppsummering. Gjør du det, sendes lyden eller teksten direkte fra telefonen til tjenesten du har valgt, med din egen API-nøkkel. Da gjelder den tjenestens vilkår og personvernerklæring. Vi ser ikke hva som sendes. API-nøkkelen lagres i nøkkelringen på telefonen.</p>
@@ -49,7 +62,8 @@
   <div class="eyebrow" lang="en">English</div>
   <h2 lang="en">Privacy policy</h2>
   <div lang="en">
-    <p>Apropos does not collect any information about you. Recordings, transcripts, summaries and settings are stored only on your phone, and we have no server. Speech recognition runs on the phone with NB-ASR, a speech model from the National Library of Norway; summaries are made with Apple Intelligence on the phone.</p>
+    <p>Apropos does not collect any information about you. Recordings, transcripts, summaries and settings are stored only on your phone, and we have no server. Speech recognition runs on the phone with a speech model included in the app; summaries are made with Apple Intelligence on the phone.</p>
+    <p>If you turn on speaker labels, the audio is kept on the phone until the recording has been processed and is then deleted. The model that does this is downloaded once from Apple and runs on the phone.</p>
     <p>If you choose to connect an external, OpenAI-compatible service under Settings → Models, audio or text is sent directly from your phone to that service with your own API key, and that service's terms and privacy policy apply. Your API key is stored in the phone's Keychain.</p>
     <p>The app has no analytics, tracking or advertising. Contact: <a href="mailto:marius.husnes@gmail.com">marius.husnes@gmail.com</a></p>
   </div>
